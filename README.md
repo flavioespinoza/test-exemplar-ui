@@ -1,11 +1,14 @@
 # exemplar-ui
-Exemplar React UI-Components and Ingest Forms
 
+React UI-Components and Ingest Forms
 
+![dependencies](https://img.shields.io/david/flavioespinoza/exemplar-ui.svg) ![last commit](https://img.shields.io/github/last-commit/flavioespinoza/exemplar-ui.svg) 
+
+![build](https://img.shields.io/drone/build/webshield-dev/authnet-app?label=drone%20build)
+
+## Getting Started
+
+Clone repo:
 ```bash
-git init
-git add .
-git commit -m "first commit"
-git remote add origin https://github.com/flavioespinoza/exemplar-ui.git
-git push -u origin master
+git clone https://github.com/flavioespinoza/exemplar-ui.git
 ```

@@ -28,7 +28,7 @@ const baseConfig = {
     ]
   },
   resolve: {
-    extensions: ['', '.css', '.scss', '.js', '.json']
+    extensions: ['', '.css', '.scss', '.js', '.jsx', '.ts', '.tsx', '.json']
   },
   postcss: [autoprefixer]
 };
