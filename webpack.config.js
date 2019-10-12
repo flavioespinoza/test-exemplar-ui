@@ -6,14 +6,14 @@ const autoprefixer = require('autoprefixer');
 
 const configForEnv = (env) => {
   switch (env) {
-  case 'test':
-    return testConfig;
-  case 'development':
-    return developmentConfig;
-  case 'production':
-    return productionConfig;
-  default:
-    throw new TypeError(`Invalid environment given ${env}!`);
+    case 'test':
+      return testConfig;
+    case 'development':
+      return developmentConfig;
+    case 'production':
+      return productionConfig;
+    default:
+      throw new TypeError(`Invalid environment given ${env}!`);
   }
 };
 
@@ -24,13 +24,18 @@ const baseConfig = {
         test: /\.js$/,
         loader: 'babel',
         exclude: /node_modules/,
-      }
-    ]
+      },
+      {
+        test: /\.jsx$/,
+        loader: 'babel',
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
-    extensions: ['', '.css', '.scss', '.js', '.jsx', '.ts', '.tsx', '.json']
+    extensions: ['', '.css', '.scss', '.js', '.jsx', '.json'],
   },
-  postcss: [autoprefixer]
+  postcss: [autoprefixer],
 };
 
 module.exports = merge(baseConfig, configForEnv(process.env.NODE_ENV));
