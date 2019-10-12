@@ -12,7 +12,7 @@ module.exports = {
   output: {
     libraryTarget: 'umd',
     path: path.resolve(__dirname, 'dist'),
-    library: 'ReactFlexboxGrid',
+    library: 'ExemplarUi',
     filename: '[name].js',
   },
   module: {

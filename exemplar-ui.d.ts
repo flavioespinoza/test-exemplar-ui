@@ -3,7 +3,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 import {Component, HTMLAttributes} from 'react';
 
-declare namespace __ReactFlexboxGrid {
+declare namespace __ExemplarUi {
   type ViewportSizeType = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   type ColumnSizeType = number | boolean;
 
@@ -57,4 +57,4 @@ declare namespace __ReactFlexboxGrid {
   }
 }
 
-export = __ReactFlexboxGrid;
+export = __ExemplarUi;
