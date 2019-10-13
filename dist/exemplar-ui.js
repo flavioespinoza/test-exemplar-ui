@@ -49604,43 +49604,76 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _withStyles = __webpack_require__(15);
-
-	var _withStyles2 = _interopRequireDefault(_withStyles);
-
-	var _cardStyle = __webpack_require__(108);
-
-	var _cardStyle2 = _interopRequireDefault(_cardStyle);
-
-	var _styles = __webpack_require__(110);
+	exports.getCardProps = getCardProps;
+	exports.default = Card;
 
 	var _react = __webpack_require__(7);
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _classNames = __webpack_require__(2);
+
+	var _classNames2 = _interopRequireDefault(_classNames);
+
+	var _propTypes = __webpack_require__(8);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
+	var _createProps = __webpack_require__(11);
+
+	var _createProps2 = _interopRequireDefault(_createProps);
+
+	var _types = __webpack_require__(12);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var useStyles = (0, _styles.makeStyles)(function (theme) {
-	  return _extends({}, _cardStyle2.default);
-	});
+	var rowKeys = ['start', 'center', 'end', 'top', 'middle', 'bottom', 'around', 'between']; // import withStyles from '@material-ui/core/styles/withStyles';
+	// import cardStyle from '../assets/jss/material-dashboard-pro-react/components/cardStyle';
+	// import { makeStyles } from '@material-ui/core/styles';
 
-	function Card() {
-	  var classes = useStyles();
-	  return _react2.default.createElement(
-	    'div',
-	    { className: classes.card },
-	    _react2.default.createElement(
-	      'h1',
-	      null,
-	      'Hello Card'
-	    )
-	  );
+
+	var propTypes = {
+	  reverse: _propTypes2.default.bool,
+	  start: _types.ViewportSizeType,
+	  center: _types.ViewportSizeType,
+	  end: _types.ViewportSizeType,
+	  top: _types.ViewportSizeType,
+	  middle: _types.ViewportSizeType,
+	  bottom: _types.ViewportSizeType,
+	  around: _types.ViewportSizeType,
+	  between: _types.ViewportSizeType,
+	  className: _propTypes2.default.string,
+	  tagName: _propTypes2.default.string,
+	  children: _propTypes2.default.node
+	};
+
+	function getCardClassNames(props) {
+	  var modifiers = [props.className, (0, _classNames2.default)('row')];
+
+	  for (var i = 0; i < rowKeys.length; ++i) {
+	    var key = rowKeys[i];
+	    var value = props[key];
+	    if (value) {
+	      modifiers.push((0, _classNames2.default)(key + '-' + value));
+	    }
+	  }
+
+	  if (props.reverse) {
+	    modifiers.push((0, _classNames2.default)('reverse'));
+	  }
+
+	  return modifiers;
 	}
 
-	exports.default = (0, _withStyles2.default)(_cardStyle2.default)(Card);
+	function getCardProps(props) {
+	  return (0, _createProps2.default)(propTypes, props, getCardClassNames(props));
+	}
+
+	function Card(props) {
+	  return _react2.default.createElement(props.tagName || 'div', getCardProps(props));
+	}
+
+	Card.propTypes = propTypes;
 
 /***/ }),
 /* 468 */
