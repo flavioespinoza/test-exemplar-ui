@@ -1,18 +1,17 @@
-import withStyles from '@material-ui/core/styles/withStyles';
+import * as React from 'react';
 import cardStyle from '../assets/jss/material-dashboard-pro-react/components/cardStyle';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
-import React from 'react';
 
 
-// const useStyles = makeStyles((theme) => {
-//   return {
-//     ...cardStyle,
-//   };
-// });
+const useStyles = makeStyles((theme) => {
+  return {
+    ...cardStyle,
+  };
+});
 
-function CoolButton() {
-  // const classes = useStyles();
+export default function CoolButton() {
+  const classes = useStyles();
   return (
     <div className={classes.card}>
       <h1>Hello Button</h1>
@@ -22,5 +21,3 @@ function CoolButton() {
     </div>
   );
 }
-
-export default withStyles(cardStyle)(CoolButton);
