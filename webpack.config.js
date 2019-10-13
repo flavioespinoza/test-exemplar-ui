@@ -24,11 +24,16 @@ const baseConfig = {
         test: /\.js$/,
         loader: 'babel',
         exclude: /node_modules/,
-      }
+      },
+      {
+        test: /\.jsx$/,
+        loader: 'babel',
+        exclude: /node_modules/,
+      },
     ]
   },
   resolve: {
-    extensions: ['', '.css', '.scss', '.js', '.jsx', '.ts', '.tsx', '.json']
+    extensions: ['', '.css', '.scss', '.js', '.jsx', '.json']
   },
   postcss: [autoprefixer]
 };
