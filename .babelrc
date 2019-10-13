@@ -3,5 +3,9 @@
     "env",
     "stage-1",
     "react"
+  ],
+  "plugins": [
+    "babel-plugin-external-helpers",
+    "babel-plugin-transform-react-jsx"
   ]
 }
