@@ -24,11 +24,9 @@
     "@material-ui/core": "^4.5.0",
     "@material-ui/icons": "^4.4.3",
     "braces": "^3.0.2",
-    "engine.io-client": "^3.4.0",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.15",
-    "mem": "^5.1.1",
-    "parsejson": "^0.0.3"
+    "mem": "^5.1.1"
   },
   "devDependencies": {
     "@types/react": "*",
@@ -60,11 +58,6 @@
     "install-peers-cli": "^2.1.1",
     "isparta": "^4.0.0",
     "jsdom": "^7.0.2",
-    "karma": "^4.3.0",
-    "karma-mocha": "^1.3.0",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "karma-webpack": "^2.0.3",
-    "mocha": "^6.2.1",
     "node-pre-gyp": "0.12.0",
     "node-sass": "^4.12.0",
     "phantomjs-prebuilt": "^2.1.14",
@@ -95,8 +88,8 @@
     "prep": "npm run prebuild && npm run prepublish",
     "release": "bumped release",
     "start": "cross-env NODE_ENV=development UV_THREADPOOL_SIZE=100 node ./server",
-    "test": "cross-env NODE_ENV=test karma start",
-    "test:watch": "cross-env NODE_ENV=test karma start --no-single-run"
+    "test": "test",
+    "test:watch": "test"
   },
   "license": "MIT"
 }
