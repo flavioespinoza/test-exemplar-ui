@@ -1,0 +1,4 @@
++ mem@5.1.1
+added 5 packages from 2 contributors, updated 1 package and audited 13888 packages in 6.04s
+found 6 vulnerabilities (3 low, 1 moderate, 2 high)
+  run `npm audit fix` to fix them, or `npm audit` for details

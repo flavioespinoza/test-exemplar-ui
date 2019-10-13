@@ -26,6 +26,7 @@
     "braces": "^3.0.2",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.15",
+    "mem": "^5.1.1",
     "parsejson": "^0.0.3"
   },
   "devDependencies": {
