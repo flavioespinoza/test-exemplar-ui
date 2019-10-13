@@ -82,7 +82,7 @@
     "compile:dist": "rm -rf dist && cross-env ./node_modules/.bin/webpack",
     "compile:lib": "rm -rf lib && ./node_modules/.bin/babel -d ./lib ./src",
     "lint": "eslint src test",
-    "peers": "yarn install && yarn run install-peers",
+    "peers": "install-peers",
     "patch": "bumped release patch",
     "prebuild": "npm run clean",
     "prepublish": "npm run build",
