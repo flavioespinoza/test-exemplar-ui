@@ -489,8 +489,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 	var _withStyles = __webpack_require__(15);
 
 	var _withStyles2 = _interopRequireDefault(_withStyles);
@@ -509,12 +507,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var useStyles = (0, _styles.makeStyles)(function (theme) {
-	  return _extends({}, _cardStyle2.default);
-	});
+	// const useStyles = makeStyles((theme) => {
+	//   return {
+	//     ...cardStyle,
+	//   };
+	// });
 
 	function CoolButton() {
-	  var classes = useStyles();
+	  // const classes = useStyles();
 	  return _react2.default.createElement(
 	    'div',
 	    { className: classes.card },
