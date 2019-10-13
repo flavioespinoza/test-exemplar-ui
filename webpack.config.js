@@ -1,15 +1,11 @@
 const merge = require('webpack-merge');
-const testConfig = require('./webpack.config.test');
-const developmentConfig = require('./webpack.config.development');
 const productionConfig = require('./webpack.config.production');
 const autoprefixer = require('autoprefixer');
 
 const configForEnv = (env) => {
   switch (env) {
-  case 'test':
-    return testConfig;
   case 'development':
-    return developmentConfig;
+    return productionConfig;
   case 'production':
     return productionConfig;
   default:

@@ -12,3 +12,13 @@ Clone repo:
 ```bash
 git clone https://github.com/flavioespinoza/exemplar-ui.git
 ```
+
+
+```json
+{
+  "webpack": "^1.12.9",
+  "webpack-dev-middleware": "^1.4.0",
+  "webpack-hot-middleware": "^2.4.1",
+  "webpack-merge": "^4.1.0"
+}
+```
