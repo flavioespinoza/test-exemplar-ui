@@ -19,10 +19,7 @@
     "react",
     "react-component"
   ],
-  "peerDependencies": {
-    "node-sass": "^3.4.2",
-    "react-dom": "^15.4.2"
-  },
+  "peerDependencies": {},
   "dependencies": {
     "@material-ui/core": "^4.5.0",
     "@material-ui/icons": "^4.4.3",
@@ -31,7 +28,10 @@
     "classnames": "^2.2.6",
     "flexboxgrid2": "^7.2.0",
     "formik": "^1.5.8",
-    "prop-types": "^15.7.2"
+    "node-pre-gyp": "0.12.0",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "react-dom": "16.9.0"
   },
   "devDependencies": {
     "@types/react": "*",
@@ -54,6 +54,8 @@
     "expect": "^1.13.0",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.8.2",
+    "install-peers": "^1.0.3",
+    "install-peers-cli": "^2.1.1",
     "isparta": "^4.0.0",
     "jsdom": "^7.0.2",
     "karma": "^1.6.0",
@@ -61,16 +63,12 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-webpack": "^2.0.3",
     "mocha": "^3.1.2",
-    "node-sass": "^4.12.0",
     "phantomjs-prebuilt": "^2.1.14",
     "postcss-loader": "^0.7.0",
     "react": "16.9.0",
-    "react-addons-test-utils": "^15.6.2",
-    "react-dom": "16.9.0",
     "react-hot-loader": "^1.3.0",
     "redbox-react": "^1.1.1",
     "rimraf": "^2.4.4",
-    "sass-loader": "^3.1.2",
     "style-loader": "^0.12.3",
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",
@@ -84,6 +82,7 @@
     "compile:dist": "rm -rf dist && cross-env ./node_modules/.bin/webpack",
     "compile:lib": "rm -rf lib && ./node_modules/.bin/babel -d ./lib ./src",
     "lint": "eslint src test",
+    "peers": "yarn install && yarn run install-peers",
     "patch": "bumped release patch",
     "prebuild": "npm run clean",
     "prepublish": "npm run build",
